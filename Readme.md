@@ -1,8 +1,8 @@
 # Goal
 
-- [ ] # Data Structures
+- [ ] **Data Structures**
 
-  - [ ] ## Trees
+  - [ ] Trees
     - [ ] **Binary Trees**
       - [ ] [Recursive preorder](#recursive-preorder), [inorder](), [postorder traversal]()
       - [ ] Iterative preorder, inorder, postorder traversal
@@ -11,24 +11,24 @@
     - [ ] N-ary tree
     - [ ] Trie-tree
 
-  - [ ] ## Hash tables
-  - [ ] ## Heaps
-  - [ ] ## Graphs
+  - [ ] Hash tables
+  - [ ] Heaps
+  - [ ] Graphs
 
-- [ ] # Sorting
-- [ ] # Recursion 
+- [ ] **Sorting**
+- [ ] **Recursion** 
 
 ## Theoretical Questions
 
-- [ ] Operating Systems
-- [ ] Discrete Mathematics
+- [ ] **Operating Systems**
+- [ ] **Discrete Mathematics**
 
 ## Answers
 
 
-## Resources
+# Resources
 
-- Trees
+### Trees
 
 - **Pre-order traversal**
 
@@ -36,24 +36,21 @@
   - recursive-preorder
 
 
-## Sorting 
+### Sorting 
 - Primitive Sorting O(n^2)
   - Selection Sort (Сортировка выбором)
   - Insertion Sort (Сортровка вставками)
   
     **Insertion Sort** является _stable_ и _in-place_ алгоритмом, который действительно хорошо работает только для почти отсортированных или небольших массивов.
       
-    in-place: Требует небольшого постоянного дополнительного пространства памяти (не зависит от n),он перезаписывает исходные ячейки памяти элементов в коллекции.
-      
+    in-place: Требует небольшого постоянного дополнительного пространства памяти (не зависит от n),он перезаписывает исходные ячейки памяти элементов в коллекции.  
     stable: вернет одинаковые элементы в том же относительном порядке
         
-     Характеристики: 
+    > #### Характеристики:     
+           Худшее и среднее время: O(n^2)
+           Лучшее время для маленьких массивов (примерно 10 элементов): O(n)
         
-      Худшее и среднее время: $$O(n^2)$$
-      
-      Лучшее время для маленьких массивов (примерно 10 элементов): $$O(n)$$
-        
-      **Затраты времени:** $$O(n)$$ основной, $$O(1)$$ дополнительной 
+      **Затраты времени:** O(n) основной, O(1) дополнительной 
         
       Сам по себе неэффективен, поэтому может использоваться либо когда массив мал или в комбинации с другими алгоритмами
 
