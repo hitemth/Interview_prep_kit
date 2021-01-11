@@ -58,6 +58,22 @@ So basically, a heap supports two operations. There's some bells and whistles yo
 ## Sorting 
 - Primitive Sorting O(n^2)
   - Selection Sort (Сортировка выбором)
+  
+  ```python
+  def selection_sort(nums):
+    # This value of i corresponds to how many values were sorted
+    for i in range(len(nums)):
+        # We assume that the first item of the unsorted segment is the smallest
+        lowest_value_index = i
+        # This loop iterates over the unsorted items
+        for j in range(i + 1, len(nums)):
+            if nums[j] < nums[lowest_value_index]:
+                lowest_value_index = j
+        # Swap values of the lowest unsorted element with the first unsorted
+        # element
+        nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
+   ```
+  
   - Insertion Sort (Сортровка вставками)
   
     **Insertion Sort** является _stable_ и _in-place_ алгоритмом, который действительно хорошо работает только для почти отсортированных или небольших массивов.
@@ -84,3 +100,19 @@ So basically, a heap supports two operations. There's some bells and whistles yo
             arr[j+1] = key 
 ```
   - Bubble Sort (Сортировка Пузырьком)
+  
+  
+  ```python 
+  def bubble_sort(nums):
+    # We set swapped to True so the loop looks runs at least once
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(len(nums) - 1):
+            if nums[i] > nums[i + 1]:
+                # Swap the elements
+                nums[i], nums[i + 1] = nums[i + 1], nums[i]
+                # Set the flag to True so we'll loop again
+                swapped = True
+   ```
+  
