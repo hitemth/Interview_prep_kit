@@ -89,7 +89,7 @@ So basically, a heap supports two operations. There's some bells and whistles yo
         
       Сам по себе неэффективен, поэтому может использоваться либо когда массив мал или в комбинации с другими алгоритмами
 
-        ```python 
+      ```python 
             def InsertionSort(arr):
                 for i in range(1, len(arr)):
                     key = arr[i]
@@ -98,11 +98,11 @@ So basically, a heap supports two operations. There's some bells and whistles yo
                         arr[j+1] = arr[j]
                         j -= 1
                     arr[j+1] = key 
-        ```
+       ```
        
   - Bubble Sort (Сортировка Пузырьком)
   
-        ```python 
+      ```python 
         def bubble_sort(nums):
           # We set swapped to True so the loop looks runs at least once
           swapped = True
@@ -114,5 +114,5 @@ So basically, a heap supports two operations. There's some bells and whistles yo
                       nums[i], nums[i + 1] = nums[i + 1], nums[i]
                       # Set the flag to True so we'll loop again
                       swapped = True
-         ```
+       ```
   
