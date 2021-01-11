@@ -34,31 +34,33 @@ So the number one thing you should remember about a given data structure is what
 
 ### Trees
 
+#### Binary Trees
+  ```python
+      # Definition for a binary tree node.
+ class TreeNode:
+     def __init__(self, val=0, left=None, right=None):
+         self.val = val
+         self.left = left
+         self.right = right  
+  ```
+
 - **Pre-order traversal**
   ```python 
       def preorderIterative(root):
-      
-          # return if tree is empty
           if root is None:
               return
-
-          # create an empty stack and push root node
+              
           stack = deque()
           stack.append(root)
 
-          # loop till stack is empty
           while stack:
 
-              # pop a node from the stack and print it
               curr = stack.pop()
-
               print(curr.data, end=' ')
 
-              # push right child of popped node to the stack
               if curr.right:
                   stack.append(curr.right)
 
-              # push left child of popped node to the stack
               if curr.left:
                   stack.append(curr.left)
     ```
