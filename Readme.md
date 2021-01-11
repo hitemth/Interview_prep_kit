@@ -89,30 +89,30 @@ So basically, a heap supports two operations. There's some bells and whistles yo
         
       Сам по себе неэффективен, поэтому может использоваться либо когда массив мал или в комбинации с другими алгоритмами
 
-```python 
-    def InsertionSort(arr):
-        for i in range(1, len(arr)):
-            key = arr[i]
-            j = i-1
-            while j >=0 and arr[j] > k :
-                arr[j+1] = arr[j]
-                j -= 1
-            arr[j+1] = key 
-```
+        ```python 
+            def InsertionSort(arr):
+                for i in range(1, len(arr)):
+                    key = arr[i]
+                    j = i-1
+                    while j >=0 and arr[j] > k :
+                        arr[j+1] = arr[j]
+                        j -= 1
+                    arr[j+1] = key 
+        ```
+       
   - Bubble Sort (Сортировка Пузырьком)
   
-  
-  ```python 
-  def bubble_sort(nums):
-    # We set swapped to True so the loop looks runs at least once
-    swapped = True
-    while swapped:
-        swapped = False
-        for i in range(len(nums) - 1):
-            if nums[i] > nums[i + 1]:
-                # Swap the elements
-                nums[i], nums[i + 1] = nums[i + 1], nums[i]
-                # Set the flag to True so we'll loop again
-                swapped = True
-   ```
+        ```python 
+        def bubble_sort(nums):
+          # We set swapped to True so the loop looks runs at least once
+          swapped = True
+          while swapped:
+              swapped = False
+              for i in range(len(nums) - 1):
+                  if nums[i] > nums[i + 1]:
+                      # Swap the elements
+                      nums[i], nums[i + 1] = nums[i + 1], nums[i]
+                      # Set the flag to True so we'll loop again
+                      swapped = True
+         ```
   
