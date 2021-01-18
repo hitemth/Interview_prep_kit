@@ -4,8 +4,8 @@
 
   - [ ] Trees
     - [ ] **Binary Trees**
-      - [ ] [Recursive preorder](#recursive-preorder), [inorder](), [postorder traversal]()
-      - [ ] Iterative preorder, inorder, postorder traversal
+      - [x] Recursive preorder, inorder, postorder traversal
+      - [x] Iterative preorder, inorder, postorder traversal
       - [ ] Level-order traversal 
       - [ ] Recursive solutions
     - [ ] N-ary tree
