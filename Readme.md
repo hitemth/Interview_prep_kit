@@ -45,27 +45,119 @@ So the number one thing you should remember about a given data structure is what
   ```
 
 - **Pre-order traversal**
-  ```python 
-      def preorderIterative(root):
-          if root is None:
-              return
-              
-          stack = deque()
-          stack.append(root)
 
-          while stack:
-
-              curr = stack.pop()
-              print(curr.data, end=' ')
-
-              if curr.right:
-                  stack.append(curr.right)
-
-              if curr.left:
-                  stack.append(curr.left)
-    ```
   Pre-order traversal is to visit the root first. Then traverse the left subtree. Finally, traverse the right subtree.
-  - recursive-preorder
+  
+  **Recursive:**
+  ```python
+      def preorderRecursive(root):
+          result= []
+          if root:
+            result.append(root.val)
+            preorderRecursive(root.left)
+            preorderRecursive(root.right)
+          return result
+  ```
+  **Iterative:**
+  ```python 
+      def preorderTraversal(self, root: TreeNode) -> List[int]:
+        result = []
+        stack = []
+        
+        if root is None:
+            return
+     
+        stack.append(root)
+        
+        while stack:
+            current = stack.pop()
+            result.append(current.val)
+            
+            if current.right:
+                stack.append(current.right)
+                
+            if current.left:
+                stack.append(current.left)
+        
+        return result
+    ```
+  
+  
+- **In-order traversal**
+
+  In-order traversal is to traverse the left subtree first. Then visit the root. Finally, traverse the right subtree.
+  
+  **Recursive:**
+  
+  ```python 
+      def inorderRecursive(root):
+          result = []
+          if root:
+            inorderRecursive(root.left)
+            result.append(root.val)
+            inorderRecursive(root.right)
+            
+          return result
+  ```
+  **Iterative:**
+  
+  ```python 
+      from collections import deque
+      
+      def inorderTraversal(self, root: TreeNode) -> List[int]:
+          result = []
+          stack = deque()
+          cur = root
+          while cur or stack:
+              if cur:
+                  stack.append(cur)
+                  cur = cur.left
+              else:
+                  cur = stack.pop()
+                  result.append(cur.val)
+                  cur = cur.right
+          return result
+    ```
+    
+- **Post-order traversal**
+
+  Post-order traversal is to traverse the left subtree first. Then traverse the right subtree. Finally, visit the root.
+  
+  **Recursive:**
+  ```python 
+    def postorderRecursive(root):
+      result = []
+      if root:
+        postorderRecursive(root.left)
+        postorderRecursive(root.right)
+        result.append(root.val)
+        
+      return result
+    
+  ```
+  **Iterative:**
+  
+  ```python 
+      from collections import deque
+      
+      def postorderTraversal(self, root: TreeNode) -> List[int]:
+        result = deque()
+        stack = deque()
+        stack.append(root)
+        
+        if root is None:
+            return
+        
+        while stack:
+            cur = stack.pop()
+            result.append(cur.val)
+            if cur.left:
+                stack.append(cur.left)
+            if cur.right:
+                stack.append(cur.right)
+        result.reverse()        
+        return result
+    ```
 
 ### Heaps
 
